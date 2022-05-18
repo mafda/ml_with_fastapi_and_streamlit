@@ -1,0 +1,4 @@
+dependencies:
+  - black=19.10b0
+  - flake8=4.0.1
+  - isort=5.9.3
