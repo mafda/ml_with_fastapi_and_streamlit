@@ -1,2 +1,6 @@
 name: ds-app
+channels:
+  - conda-forge
 dependencies:
+  - streamlit=1.9.0
+  - python=3.9.7
