@@ -1,15 +1,11 @@
 # Prototyping a Machine Learning Application with Streamlit
 
-[Streamlit](https://streamlit.io) is a free, open-source, all-python framework
-that enables data scientists to quickly build interactive dashboards and machine
-learning web apps with no front-end web development experience required.
-
 - [Prototyping a Machine Learning Application with Streamlit](#prototyping-a-machine-learning-application-with-streamlit)
   - [What is Prototyping?](#what-is-prototyping)
     - [Prototyping Tools](#prototyping-tools)
   - [What is Streamlit?](#what-is-streamlit)
-    - [Why use Streamlit](#why-use-streamlit)
-  - [Example](#example)
+    - [Why use Streamlit?](#why-use-streamlit)
+  - [Example ML-App](#example-ml-app)
     - [Architecture](#architecture)
     - [Project Setup](#project-setup)
       - [Clone this repository](#clone-this-repository)
@@ -44,13 +40,36 @@ There are different tools according to the level of fidelity or similarity betwe
 
 ## What is Streamlit?
 
-### Why use Streamlit
+[Streamlit](https://streamlit.io) is a free, open-source, all-python framework
+that enables data scientists to quickly build interactive dashboards and machine
+learning web apps with no front-end web development experience required.
 
-I think it could be a good option when you want to get a
+This framework has gained a lot of [attention and popularity](https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila) among data scientists and machine learning programmers in recent years. Its growth is due to the fact that it is:
+
+* an easy-to-use tool,
+* needs basic knowledge of Python,
+* and it is **compatible with frameworks** such as:
+  * Machine Learning: TensorFLow, PyTorch, Scikit-learn,
+  * Visualization libraries: Seaborn, Altair, Plotly,
+  * and others.
+
+### Why use Streamlit?
+
+During the process of developing data science projects, we always need to present the results of our findings at certain times. And sometimes we may have doubts about what would be the best way to present these results.
+
+Then, this is where tools like Streamlit emerge as a quick way to expose results, that are functional and don't need complex implementations.
+
+Streamlit can be seen as an opportunity for example to:
+* **prototype** quickly,
+* create MVP,
+* put an application into production in a few weeks,
+* and even share a link with the client or user of the system that is being developed.
+
+So, I think it could be a good option when you want to get a
 [prototype](https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila)
 of your dashboard/web app up and running as quickly as possible.
 
-## Example
+## Example ML-App
 
 ### Architecture
 
