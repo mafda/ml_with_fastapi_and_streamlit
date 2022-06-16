@@ -5,6 +5,7 @@
     - [Prototyping Tools](#prototyping-tools)
   - [What is Streamlit?](#what-is-streamlit)
     - [Why use Streamlit?](#why-use-streamlit)
+    - [How it Works?](#how-it-works)
   - [Example ML-App](#example-ml-app)
     - [Architecture](#architecture)
     - [Project Setup](#project-setup)
@@ -34,9 +35,9 @@ Prototyping is a fundamental step for any type of product, idea or service becau
 
 There are different tools according to the level of fidelity or similarity between the idea and the final product. These levels can vary in the conceptual, aesthetic and functional.
 
-* Low-fidelity prototyping is a paper draft of the idea.
-* Mid-fidelity prototyping can be produced in software a mockup, replicating some fundamental functionalities of the idea. Some tools such as [Figma](https://www.figma.com), [Sketch](https://www.sketch.com), [Miro](https://miro.com), [InVision](https://www.invisionapp.com).
-* High-fidelity prototype may include some level of programming to fluidly replicate the behavior of the final solution. Some tools such as [Flask](https://flask.palletsprojects.com/en/2.1.x/), [Streamlit](https://streamlit.io).
+* **Low-fidelity** prototyping is a paper draft of the idea.
+* **Mid-fidelity** prototyping can be produced in software a mockup, replicating some fundamental functionalities of the idea. Some tools such as [Figma](https://www.figma.com), [Sketch](https://www.sketch.com), [Miro](https://miro.com), [InVision](https://www.invisionapp.com).
+* **High-fidelity** prototype may include some level of programming to fluidly replicate the behavior of the final solution. Some tools such as [Flask](https://flask.palletsprojects.com/en/2.1.x/), [Streamlit](https://streamlit.io).
 
 ## What is Streamlit?
 
@@ -68,6 +69,30 @@ Streamlit can be seen as an opportunity for example to:
 So, I think it could be a good option when you want to get a
 [prototype](https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila)
 of your dashboard/web app up and running as quickly as possible.
+
+### How it Works?
+
+1. [Install Streamlit](https://docs.streamlit.io/library/get-started/installation). I recommended you use **Conda and set up your environment**, but you can use:
+
+    ```shell
+    pip install streamlit
+    ```
+
+2. [Create](https://docs.streamlit.io/library/get-started/create-an-app) a new Python script and import Streamlit with a few Streamlit commands:
+
+    ```shell
+    import streamlit as st
+    ```
+
+3. [Run](https://docs.streamlit.io/library/get-started/main-concepts) it:
+
+    ```shell
+    streamlit run your_script.py
+    ```
+
+    As soon as you run the script, a local Streamlit server will spin up and your app will open in a new tab in your default web browser.
+
+    Or you can navigate to `http://localhost:8501`
 
 ## Example ML-App
 
