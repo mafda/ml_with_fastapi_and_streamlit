@@ -125,7 +125,7 @@ of your dashboard/web app up and run it as quickly as possible.
 
 ## Example ML-App
 
-
+In this example, I propose a basic architecture.
 
 ### Architecture
 
