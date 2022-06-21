@@ -154,20 +154,20 @@ Installing Streamlit is as simple as installing any other Python package.
   Practices](https://github.com/mafda/python_best_practices))
 
 ```shell
-(base)$: conda env update -n ds-app -f environment-dev.yml
+(base)$: conda env update -n ml-app -f environment-dev.yml
 ```
 
 - Activate the environment
 
 ```shell
-(base)$: conda activate ds-app
+(base)$: conda activate ml-app
 (base)$: git checkout streamlit-basic
 ```
 
 - Run
 
 ```shell
-(ds-app)$: streamlit run src/app.py
+(ml-app)$: streamlit run src/app.py
 ```
 
 - And go to [http://localhost:8501](http://localhost:8501)

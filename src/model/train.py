@@ -5,7 +5,9 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.utils import to_categorical
 
 
-def load_data():
+def train_model(epochs, model_path):
+    # ======= LOAD DATA =======
+
     # load dataset
     (X_train, y_train), (X_test, y_test) = mnist.load_data()
 
@@ -27,10 +29,8 @@ def load_data():
     y_train_cat = to_categorical(y_train, 10)
     y_test_cat = to_categorical(y_test, 10)
 
-    return input_shape, X_train, y_train_cat, X_test, y_test_cat
+    # ======= DEFINE MODEL =======
 
-
-def define_model(input_shape):
     # building a linear stack of layers with the sequential model
     model = Sequential()
 
@@ -53,21 +53,19 @@ def define_model(input_shape):
     # Add the output layer
     model.add(Dense(10, activation="softmax"))
 
-    return model
+    # ======= COMPILE MODEL =======
 
-
-def compile_model(model):
     # compiling the sequential model
-    return model.compile(
+    model.compile(
         "rmsprop",
         loss="categorical_crossentropy",
         metrics=["categorical_accuracy"],
     )
 
+    # ======= FIT MODEL =======
 
-def fit_model(model, X_train, y_train_cat, X_test, y_test_cat, epochs):
     # training the model and saving metrics in history
-    return model.fit(
+    model.fit(
         X_train,
         y_train_cat,
         batch_size=256,
@@ -76,18 +74,10 @@ def fit_model(model, X_train, y_train_cat, X_test, y_test_cat, epochs):
         validation_data=(X_test, y_test_cat),
     )
 
+    # ======= SAVE MODEL =======
 
-def save_model(model, model_path):
-
-    return model.save(model_path)
-
-
-def train_model(epochs, model_path):
-    input_shape, X_train, y_train_cat, X_test, y_test_cat = load_data()
-    model = define_model(input_shape)
-    model = compile_model(model)
-    model = fit_model(model, X_train, y_train_cat, X_test, y_test_cat, epochs)
-    save_model(model_path)
+    model.save(model_path)
 
 
-train_model(100, "./my_model/mnist.h5")
+if __name__ == "__main__":
+    train_model(1, "./my_model/mnist-test.h5")
