@@ -1,3 +1,8 @@
+"""Project: Prototyping a Machine Learning Application with Streamlit
+
+CNN for training mnist dataset
+"""
+
 from tensorflow.keras import backend as K
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.layers import Conv2D, Dense, Flatten
@@ -6,24 +11,35 @@ from tensorflow.keras.utils import to_categorical
 
 
 def train_model(epochs, model_path):
+    """Train model function
+
+    Parameters
+    ----------
+    epochs : int
+        epochs number
+    model_path : str
+        path to save model
+
+    """
+
     # ======= LOAD DATA =======
 
     # load dataset
-    (X_train, y_train), (X_test, y_test) = mnist.load_data()
+    (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
     # reshaping the inputs
     if K.image_data_format() == "channels_first":
-        X_train = X_train.reshape(X_train.shape[0], 1, 28, 28)
-        X_test = X_test.reshape(X_test.shape[0], 1, 28, 28)
+        x_train = x_train.reshape(x_train.shape[0], 1, 28, 28)
+        x_test = x_test.reshape(x_test.shape[0], 1, 28, 28)
         input_shape = (1, 28, 28)
     else:
-        X_train = X_train.reshape(X_train.shape[0], 28, 28, 1)
-        X_test = X_test.reshape(X_test.shape[0], 28, 28, 1)
+        x_train = x_train.reshape(x_train.shape[0], 28, 28, 1)
+        x_test = x_test.reshape(x_test.shape[0], 28, 28, 1)
         input_shape = (28, 28, 1)
 
     # normalizing the inputs
-    X_train = X_train.astype("float32") / 255.0
-    X_test = X_test.astype("float32") / 255.0
+    x_train = x_train.astype("float32") / 255.0
+    x_test = x_test.astype("float32") / 255.0
 
     # Convert class vectors to binary class matrices
     y_train_cat = to_categorical(y_train, 10)
@@ -66,12 +82,12 @@ def train_model(epochs, model_path):
 
     # training the model and saving metrics in history
     model.fit(
-        X_train,
+        x_train,
         y_train_cat,
         batch_size=256,
         epochs=epochs,
         verbose=2,
-        validation_data=(X_test, y_test_cat),
+        validation_data=(x_test, y_test_cat),
     )
 
     # ======= SAVE MODEL =======

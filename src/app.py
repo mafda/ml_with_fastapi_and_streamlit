@@ -1,3 +1,8 @@
+"""Project: Prototyping a Machine Learning Application with Streamlit
+
+Streamlit app integrated with predict_model.
+"""
+
 import cv2
 import numpy as np
 import streamlit as st
@@ -12,6 +17,7 @@ MODEL = "./my_model/mnist.h5"
 
 st.set_page_config(page_title="mnist Prediction", page_icon=":1234:")
 
+st.header("Prototyping a ML Application")
 st.title("mnist Prediction")
 st.write("Draw something here")
 
@@ -38,4 +44,10 @@ if canvas_image.image_data is not None:
     if st.button("Predict"):
         predict_class = predict_model(MODEL, img)
 
-        st.write(predict_class)
+        predict_class = predict_class.numpy()
+
+        probability = np.amax(predict_class)
+        number = np.where(predict_class == np.amax(predict_class))
+
+        st.write("Number Predict:", str(np.amax(number)))
+        st.write("Probability:", str(probability))
