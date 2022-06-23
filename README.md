@@ -81,8 +81,7 @@ During the developing process of data science projects, we always need to
 present the results of our findings at certain times. And we sometimes may have
 doubts about what would be the best way to show these results. 
 
-Then, this is where tools like Streamlit emerge as a quick way to expose results
-that are functional, and don't need complex implementations. 
+Then, this is where tools like Streamlit emerge as a quick way to expose functional results and don't need complex implementations. 
 
 Streamlit could be seen as an opportunity in situations like:
 
@@ -125,7 +124,7 @@ of your dashboard/web app up and run it as quickly as possible.
 
 ## Example ML-App
 
-I proposed a basic architecture to predict which class an input image belongs to. For this example use a [CNN](https://github.com/mafda/deep_learning_101/blob/master/src/05-convolutional-neural-networks.ipynb) in TensorFlow-Keras and the [MNIST](http://yann.lecun.com/exdb/mnist/) database.
+I proposed a basic architecture to predict which class an input image belongs to. For this example I use a [CNN](https://github.com/mafda/deep_learning_101/blob/master/src/05-convolutional-neural-networks.ipynb) in TensorFlow-Keras and the [MNIST](http://yann.lecun.com/exdb/mnist/) database.
 
 ### Architecture
 
@@ -173,6 +172,8 @@ Installing Streamlit is as simple as installing any other Python package.
 - And go to [http://localhost:8501](http://localhost:8501)
 
 ### Results
+
+![streamlit app - mnist](assets/mnist-prediction.gif)
 
 
 ### Tools
