@@ -125,7 +125,7 @@ of your dashboard/web app up and run it as quickly as possible.
 
 ## Example ML-App
 
-In this example, I propose a basic architecture.
+I proposed a basic architecture to predict which class an input image belongs to. For this example use a [CNN](https://github.com/mafda/deep_learning_101/blob/master/src/05-convolutional-neural-networks.ipynb) in TensorFlow-Keras and the [MNIST](http://yann.lecun.com/exdb/mnist/) database.
 
 ### Architecture
 
@@ -138,8 +138,8 @@ Installing Streamlit is as simple as installing any other Python package.
 #### Clone this repository
 
 ```shell
-(base)$: git clone git@github.com:mafda/data_science_with_fastapi_and_streamlit.git
-(base)$: cd data_science_with_fastapi_and_streamlit
+(base)$: git clone git@github.com:mafda/ml_with_fastapi_and_streamlit.git
+(base)$: cd ml_with_fastapi_and_streamlit
 ```
 
 #### Configure environment
