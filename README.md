@@ -71,7 +71,7 @@ growth is due to the fact that it is:
 * an easy-to-use tool,
 * needs basic knowledge of Python,
 * and it is **compatible with frameworks** such as:
-  * Machine Learning: TensorFLow, PyTorch, Scikit-learn,
+  * Machine Learning: TensorFlow, PyTorch, Scikit-learn,
   * Visualization libraries: Seaborn, Altair, Plotly, and
   * Others.
 
