@@ -19,10 +19,10 @@
 
 [Prototyping](https://www.interaction-design.org/literature/topics/prototyping)
 is a process for developing an idea, and it is used in different areas to test
-or simulate it before launching it.
+or simulate it before launching.
 
 * A [prototype](https://en.wikipedia.org/wiki/Prototype) is a version of what
-  the product would be.
+  the product will be.
 * Prototyping is the iterative process of idea development.
 
 > "So, we will have some **prototypes** of an idea in the **prototyping**
@@ -31,68 +31,68 @@ or simulate it before launching it.
 Prototyping is a fundamental step for any product, idea, or service type because
 it allows:
 
-* develop an initial version,
-* discover flaws,
-* reduce costs,
-* know the users' experience,
-* test features, and
-* also, generate [POCs](https://en.wikipedia.org/wiki/Proof-of-concept) or
+* development of an initial version,
+* discovery of flaws, 
+* reduction in costs,
+* knowledge of the users' experience,
+* testing of features, and
+* also, generation of [POCs](https://en.wikipedia.org/wiki/Proof-of-concept) or
   [MVPs](https://en.wikipedia.org/wiki/Minimum_viable_product) of the idea.
 
 ### Prototyping Tools
 
 There are different tools according to the level of fidelity or similarity
-between the idea and the final product. These levels can vary in the conceptual,
-aesthetic, and functional.
+between the idea and the final product. These levels can vary according to their
+concept, aesthetic, and function.
 
 * **Low-fidelity** prototyping is a paper draft of the idea.
 * **Mid-fidelity** prototyping can be produced in software as a mockup,
   replicating some fundamental functionalities of the idea. Some tools for
   prototyping are [Figma](https://www.figma.com),
-  [Sketch](https://www.sketch.com), [Miro](https://miro.com),
+  [Sketch](https://www.sketch.com), [Miro](https://miro.com), and 
   [InVision](https://www.invisionapp.com).
 * **High-fidelity** prototype may include some level of programming to replicate
-  the final solution behavior fluidly. Some tools for prototyping are
-  [Flask](https://flask.palletsprojects.com/en/2.1.x/),
-  [Streamlit](https://streamlit.io).
+  the final solution behavior fluidly.
+  [Flask](https://flask.palletsprojects.com/en/2.1.x/) and
+  [Streamlit](https://streamlit.io) are a couple of tools.
 
 ## What is Streamlit?
 
-[Streamlit](https://streamlit.io) is a free, open-source, all-python framework.
-It enables data scientists to build quickly interactive dashboards and machine
-learning web apps, and they don't require experience with front-end web
-development.
+[Streamlit](https://streamlit.io) is a free, open-source, all-Python framework.
+It enables data scientists to quickly build interactive dashboards and machine
+learning web apps, without requiring front-end web development experience.
 
 This framework has gained [attention and
 popularity](https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila)
 among data scientists and machine learning programmers in recent years. Its
-growth is due to the fact that it is:
+growth is due to the fact that it:
 
-* an easy-to-use tool,
-* needs basic knowledge of Python,
-* and it is **compatible with frameworks** such as:
+* is an easy-to-use tool,
+* needs basic knowledge of Python, and
+* is **compatible with frameworks** such as:
   * Machine Learning: TensorFlow, PyTorch, Scikit-learn,
   * Visualization libraries: Seaborn, Altair, Plotly, and
   * Others.
 
 ### Why use Streamlit?
 
-During the developing process of data science projects, we always need to
+During the development process of data science projects, we always need to
 present the results of our findings at certain times. And we sometimes may have
 doubts about what would be the best way to show these results. 
 
-Then, this is where tools like Streamlit emerge as a quick way to expose functional results and don't need complex implementations. 
+Then, this is where tools like Streamlit emerge as a quick way to expose
+functional results and don't need complex implementations. 
 
 Streamlit could be seen as an opportunity in situations like:
 
 * **prototyping** quickly,
-* create **MVP**,
-* put an application into production in a few weeks, and
-* share a link with the client or user of the system that is being developed.
+* creating **MVP**,
+* putting an application into production in a few weeks, and
+* sharing a link with the client or user of the system that is being developed.
 
 So, I think it could be a good option when you want to get a
 [prototype](https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila)
-of your dashboard/web app up and run it as quickly as possible.
+of your dashboard/web app up and **run it as quickly as possible**.
 
 ### How does it Work?
 
@@ -124,7 +124,10 @@ of your dashboard/web app up and run it as quickly as possible.
 
 ## Example ML-App
 
-I proposed a basic architecture to predict which class an input image belongs to. For this example I use a [CNN](https://github.com/mafda/deep_learning_101/blob/master/src/05-convolutional-neural-networks.ipynb) in TensorFlow-Keras and the [MNIST](http://yann.lecun.com/exdb/mnist/) database.
+I proposed a basic architecture to predict which class an input image belongs
+to. For this example I use a
+[CNN](https://github.com/mafda/deep_learning_101/blob/master/src/05-convolutional-neural-networks.ipynb)
+in TensorFlow-Keras and the [MNIST](http://yann.lecun.com/exdb/mnist/) database.
 
 ### Architecture
 
