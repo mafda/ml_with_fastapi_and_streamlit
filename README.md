@@ -1,4 +1,4 @@
-# Prototyping a Machine Learning Application with Streamlit
+# Prototyping a Machine Learning Application with Streamlit and FastAPI
 
 - [Prototyping a Machine Learning Application with
   Streamlit](#prototyping-a-machine-learning-application-with-streamlit)
@@ -131,7 +131,7 @@ in TensorFlow-Keras and the [MNIST](http://yann.lecun.com/exdb/mnist/) database.
 
 ### Architecture
 
-![streamlit basic architecture](assets/streamlit-basic.png)
+![streamlit with fastapi](assets/streamlit-fastapi.png)
 
 ### Project Setup
 
@@ -179,8 +179,26 @@ Installing Streamlit is as simple as installing any other Python package.
 ![streamlit app - mnist](assets/mnist-prediction.gif)
 
 
+### Basic version (Only Streamlit)
+
+- Activate the environment
+
+```shell
+(base)$: git checkout streamlit-basic
+```
+
+- Run
+
+```shell
+(ml-app)$: streamlit run src/app.py
+```
+
+- And go to [http://localhost:8501](http://localhost:8501)
+
+
 ### Tools
 
+- [FastAPI](https://fastapi.tiangolo.com)
 - [Streamlit](https://streamlit.io)
 
 
