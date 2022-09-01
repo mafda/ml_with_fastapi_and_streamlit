@@ -1,8 +1,11 @@
-from typing import Union
-
+# from typing import Union
+import uvicorn
 from fastapi import FastAPI
 
-app = FastAPI()
+LOADED_MODEL = load_model('movie_sent.h5')
+
+app = FastAPI(title="Moview Review Service", description="API to predict sentiment of movie review")
+
 
 
 @app.get("/")

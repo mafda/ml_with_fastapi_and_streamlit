@@ -5,15 +5,16 @@ Streamlit app integrated with predict_model.
 
 import cv2
 import numpy as np
+import requests
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 
-from model.valid import predict_model
+# from .backend.src.models.valid import predict_model
 
 CANVAS_SIZE = 250
 IMG_WIDTH = 28
 IMG_HEIGHT = 28
-MODEL = "./my_model/mnist.h5"
+# MODEL = "./backend/models/mnist.h5"
 
 
 def main():
@@ -47,16 +48,23 @@ def main():
         # Rescaled image upwards to show
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
+        url = "http://service:8000/predict/"
+
         if st.button("Predict"):
-            predict_class = predict_model(MODEL, img)
+            # res = requests.post(url, img)
+            # prediction = float(res.text)
+            prediction = 100.0
+            st.write("Probability:", str(prediction))
+            
+            # predict_class = predict_model(MODEL, img)
 
-            predict_class = predict_class.numpy()
+            # predict_class = predict_class.numpy()
 
-            probability = np.amax(predict_class)
-            number = np.where(predict_class == np.amax(predict_class))
+            # probability = np.amax(predict_class)
+            # number = np.where(predict_class == np.amax(predict_class))
 
-            st.write("Number Predict:", str(np.amax(number)))
-            st.write("Probability:", str(probability))
+            # st.write("Number Predict:", str(np.amax(number)))
+            # st.write("Probability:", str(probability))
 
 
 if __name__ == "__main__":

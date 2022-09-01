@@ -201,6 +201,9 @@ Installing Streamlit is as simple as installing any other Python package.
 - [FastAPI](https://fastapi.tiangolo.com)
 - [Streamlit](https://streamlit.io)
 
+uvicorn main:app --reload
+
+http://127.0.0.1:8000
 
 ---
 
