@@ -48,13 +48,16 @@ def main():
         # Rescaled image upwards to show
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-        url = "http://service:8000/predict/"
+        textinput = st.write("Draw something here")
+
+        url = "http://fastapi:8000/predict/"
 
         if st.button("Predict"):
-            # res = requests.post(url, img)
+
+            res = requests.post(url, textinput)
             # prediction = float(res.text)
-            prediction = 100.0
-            st.write("Probability:", str(prediction))
+
+            st.write("Probability:", res)
             
             # predict_class = predict_model(MODEL, img)
 
