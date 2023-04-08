@@ -2,7 +2,8 @@ name: ml-app
 channels:
   - conda-forge
 dependencies:
-  - tensorflow=2.8.1
+  - pytorch
+  - transformers
   - python=3.10.4
   - pip=21.2.4
   - pip:

@@ -8,12 +8,10 @@ import numpy as np
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 
-from model.valid import predict_model
+from model.predict import classify_number
+
 
 CANVAS_SIZE = 250
-IMG_WIDTH = 28
-IMG_HEIGHT = 28
-MODEL = "./my_model/mnist.h5"
 
 
 def main():
@@ -40,23 +38,18 @@ def main():
     )
 
     if canvas_image.image_data is not None:
-        # Scale down image to the model input size
-        img = cv2.resize(
-            np.uint8(canvas_image.image_data), (IMG_WIDTH, IMG_HEIGHT)
-        )
-        # Rescaled image upwards to show
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
         if st.button("Predict"):
-            predict_class = predict_model(MODEL, img)
+            img = cv2.cvtColor(canvas_image.image_data, cv2.COLOR_RGBA2RGB)
 
-            predict_class = predict_class.numpy()
+            probs = classify_number(img)
 
-            probability = np.amax(predict_class)
-            number = np.where(predict_class == np.amax(predict_class))
+            probability = np.amax(probs)
 
-            st.write("Number Predict:", str(np.amax(number)))
-            st.write("Probability:", str(probability))
+            st.write("Number Predict:", str(probs.argmax()))
+            st.write(f"Probability: {probability * 100:.2f}%")
+            st.write(f"Probabilities: {[f'{i:.3f}'for i in probs]}")
+
+            canvas_image.image_data = None
 
 
 if __name__ == "__main__":
