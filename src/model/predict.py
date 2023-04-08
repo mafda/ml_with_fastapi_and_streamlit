@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import torch
-from transformers import ViTImageProcessor, AutoModelForImageClassification
+from transformers import AutoModelForImageClassification, ViTImageProcessor
 
 pretrained_model = "farleyknight-org-username/vit-base-mnist"
 processor = ViTImageProcessor.from_pretrained(pretrained_model)

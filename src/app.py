@@ -10,7 +10,6 @@ from streamlit_drawable_canvas import st_canvas
 
 from model.predict import classify_digit
 
-
 CANVAS_SIZE = 250
 
 
