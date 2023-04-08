@@ -8,7 +8,7 @@ import numpy as np
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 
-from model.predict import classify_number
+from model.predict import classify_digit
 
 
 CANVAS_SIZE = 250
@@ -41,7 +41,7 @@ def main():
         if st.button("Predict"):
             img = cv2.cvtColor(canvas_image.image_data, cv2.COLOR_RGBA2RGB)
 
-            probs = classify_number(img)
+            probs = classify_digit(img)
 
             probability = np.amax(probs)
 
