@@ -1,5 +1,9 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+Digits pretrained classifier using ViT.
+Source: https://huggingface.co/farleyknight-org-username/vit-base-mnist
+"""
 
 import torch
 from transformers import AutoModelForImageClassification, ViTImageProcessor
