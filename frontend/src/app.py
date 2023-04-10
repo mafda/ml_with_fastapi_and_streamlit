@@ -2,6 +2,8 @@
 Streamlit app integrated with predict_model.
 """
 
+import os
+
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
@@ -13,9 +15,8 @@ CANVAS_SIZE = 250
 
 
 def classify_digit(img):
-    request = requests.get(
-        "http://localhost:8000/", json={"image": img.tolist()}
-    )
+    url_backend = os.environ["URL_BACKEND"]
+    request = requests.get(url_backend, json={"image": img.tolist()})
     answer = request.json()
     prob = answer["prob"]
     return np.array(prob)

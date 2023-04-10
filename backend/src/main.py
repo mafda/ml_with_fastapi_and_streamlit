@@ -6,7 +6,7 @@ app = FastAPI()
 
 
 @app.get("/")
-async def getClassify_digit(info: Request):
+async def get_classify_digit(info: Request):
     req_info = await info.json()
     img = np.array(req_info["image"])
     prob = classify_digit(img)
