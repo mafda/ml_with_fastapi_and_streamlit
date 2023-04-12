@@ -1,0 +1,12 @@
+name: frontend
+channels:
+  - conda-forge
+dependencies:
+  - matplotlib=3.7.1
+  - opencv=4.7.0
+  - pip=23.0.1
+  - python=3.11.3
+  - requests=2.28.2
+  - streamlit=1.9.0
+  - pip:
+    - streamlit-drawable-canvas==0.9.2

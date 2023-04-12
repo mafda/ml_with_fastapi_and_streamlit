@@ -1,0 +1,10 @@
+name: backend
+channels:
+  - conda-forge
+dependencies:
+  - fastapi=0.95.0
+  - pillow=9.5.0
+  - python=3.11.3
+  - pytorch=2.0.0
+  - transformers=4.27.4
+  - uvicorn=0.21.1

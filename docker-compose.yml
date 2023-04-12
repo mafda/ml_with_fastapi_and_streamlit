@@ -1,0 +1,13 @@
+services:
+  backend:
+    build: backend
+    ports:
+      - "8000:8000"
+  frontend:
+    build: frontend
+    ports:
+      - "8501:8501"
+    environment:
+      URL_BACKEND: http://backend:8000/
+    depends_on:
+      - backend
