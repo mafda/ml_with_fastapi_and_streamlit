@@ -17,6 +17,13 @@
 
 ![Handwritten digits recognition](assets/handwritten-digits-recognition.png)
 
+During the development process of data science projects, we always need to
+present the results of our findings at certain times. And we sometimes may have
+doubts about what would be the best way to show these results. 
+
+Then, this is where tools like Streamlit, FastAPI and Hugging Face emerge as a quick way to expose
+functional results and don't need complex implementations. 
+
 ## What is Prototyping?
 
 [Prototyping](https://www.interaction-design.org/literature/topics/prototyping)
@@ -75,26 +82,6 @@ growth is due to the fact that it:
   * Machine Learning: TensorFlow, PyTorch, Scikit-learn,
   * Visualization libraries: Seaborn, Altair, Plotly, and
   * Others.
-
-### Why use Streamlit?
-
-During the development process of data science projects, we always need to
-present the results of our findings at certain times. And we sometimes may have
-doubts about what would be the best way to show these results. 
-
-Then, this is where tools like Streamlit emerge as a quick way to expose
-functional results and don't need complex implementations. 
-
-Streamlit could be seen as an opportunity in situations like:
-
-* **prototyping** quickly,
-* creating **MVP**,
-* putting an application into production in a few weeks, and
-* sharing a link with the client or user of the system that is being developed.
-
-So, I think it could be a good option when you want to get a
-[prototype](https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila)
-of your dashboard/web app up and **run it as quickly as possible**.
 
 ### How does it Work?
 
@@ -196,12 +183,25 @@ $ docker-compose up
 
 - And go to [http://localhost:8501](http://localhost:8501)
 
+## Conclusions
+
+Streamlit, FastAPI and Hugging Face could be seen as an opportunity in situations like:
+
+* **prototyping** quickly,
+* creating **MVP**,
+* putting an application into production in a few weeks, and
+* sharing a link with the client or user of the system that is being developed.
+
+So, I think it could be a good option when you want to get a
+[prototype](https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila)
+of your dashboard/web app up and **run it as quickly as possible**.
 
 ## Tools
 
 - [FastAPI](https://fastapi.tiangolo.com)
 - [Hugging Face](https://huggingface.co)
 - [Streamlit](https://streamlit.io)
+- [streamlit-drawable-canvas](https://pypi.org/project/streamlit-drawable-canvas/)
 
 ---
 
