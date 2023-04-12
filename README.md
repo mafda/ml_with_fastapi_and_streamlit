@@ -1,19 +1,21 @@
-# Prototyping a Machine Learning Application with Streamlit and FastAPI
+# Prototyping a ML Application with Streamlit, FastAPI and Hugging Face
 
-- [Prototyping a Machine Learning Application with
-  Streamlit](#prototyping-a-machine-learning-application-with-streamlit)
+- [Prototyping a ML Application with Streamlit, FastAPI and Hugging Face](#prototyping-a-ml-application-with-streamlit-fastapi-and-hugging-face)
   - [What is Prototyping?](#what-is-prototyping)
     - [Prototyping Tools](#prototyping-tools)
   - [What is Streamlit?](#what-is-streamlit)
     - [Why use Streamlit?](#why-use-streamlit)
-    - [How it Works?](#how-it-works)
+    - [How does it Work?](#how-does-it-work)
+  - [What is FastAPI?](#what-is-fastapi)
+  - [What is Hugging Face?](#what-is-hugging-face)
   - [Example ML-App](#example-ml-app)
     - [Architecture](#architecture)
     - [Project Setup](#project-setup)
-      - [Clone this repository](#clone-this-repository)
-      - [Configure environment](#configure-environment)
-    - [Results](#results)
-    - [Tools](#tools)
+  - [Results](#results)
+  - [Basic version (Only Streamlit)](#basic-version-only-streamlit)
+  - [Tools](#tools)
+
+![Handwritten digits recognition](assets/handwritten-digits-recognition.png)
 
 ## What is Prototyping?
 
@@ -122,12 +124,23 @@ of your dashboard/web app up and **run it as quickly as possible**.
 
     Or you can navigate to `http://localhost:8501`.
 
+## What is FastAPI? 
+
+[FastAPI](https://fastapi.tiangolo.com) is a modern, fast (high-performance) web framework for building APIs with Python. It is based on standard Python type hints, which allows for automatic data validation, serialization, and documentation generation. 
+
+FastAPI is designed to be easy to use and highly efficient, providing features such as asynchronous support, dependency injection, and automatic generation of OpenAPI and JSON Schema documentation.
+
+ It has gained popularity in the Python community due to its ease of use, performance, and developer-friendly features.
+
+## What is Hugging Face? 
+
+[Hugging Face](https://huggingface.co) is a company and an open-source community that focuses on natural language processing (NLP) and machine learning. 
+
+Hugging Face provides a wide range of tools, libraries, and resources that are widely used by researchers, developers, and data scientists for building, training, and deploying NLP models.
+
 ## Example ML-App
 
-I proposed a basic architecture to predict which class an input image belongs
-to. For this example I use a
-[CNN](https://github.com/mafda/deep_learning_101/blob/master/src/05-convolutional-neural-networks.ipynb)
-in TensorFlow-Keras and the [MNIST](http://yann.lecun.com/exdb/mnist/) database.
+I used a pretrained [ViT](https://huggingface.co/farleyknight-org-username/vit-base-mnist) model for image classification. This model is a fine-tuned version of [google/vit-base-patch16-224-in21k](https://huggingface.co/google/vit-base-patch16-224-in21k) on the [mnist](http://yann.lecun.com/exdb/mnist/) dataset.
 
 ### Architecture
 
@@ -135,16 +148,33 @@ in TensorFlow-Keras and the [MNIST](http://yann.lecun.com/exdb/mnist/) database.
 
 ### Project Setup
 
-Installing Streamlit is as simple as installing any other Python package.
-
-#### Clone this repository
+- Clone this repository
 
 ```shell
 (base)$: git clone git@github.com:mafda/ml_with_fastapi_and_streamlit.git
 (base)$: cd ml_with_fastapi_and_streamlit
 ```
 
-#### Configure environment
+- Run the applications
+
+```shell
+$ docker-compose up
+```
+
+- And go to [http://localhost:8501](http://localhost:8501)
+
+## Results
+
+![streamlit app - mnist](assets/mnist-prediction.gif)
+
+
+## Basic version (Only Streamlit)
+
+- Change the branch
+
+```shell
+(base)$: git checkout streamlit-basic
+```
 
 - Create the conda environment
 
@@ -152,39 +182,10 @@ Installing Streamlit is as simple as installing any other Python package.
 (base)$: conda env create -f environment.yml
 ```
 
-- and update with **development dependencies** (Read more about [Python Best
-  Practices](https://github.com/mafda/python_best_practices))
-
-```shell
-(base)$: conda env update -n ml-app -f environment-dev.yml
-```
-
 - Activate the environment
 
 ```shell
 (base)$: conda activate ml-app
-(base)$: git checkout streamlit-basic
-```
-
-- Run
-
-```shell
-(ml-app)$: streamlit run src/app.py
-```
-
-- And go to [http://localhost:8501](http://localhost:8501)
-
-### Results
-
-![streamlit app - mnist](assets/mnist-prediction.gif)
-
-
-### Basic version (Only Streamlit)
-
-- Activate the environment
-
-```shell
-(base)$: git checkout streamlit-basic
 ```
 
 - Run
@@ -196,14 +197,11 @@ Installing Streamlit is as simple as installing any other Python package.
 - And go to [http://localhost:8501](http://localhost:8501)
 
 
-### Tools
+## Tools
 
 - [FastAPI](https://fastapi.tiangolo.com)
+- [Hugging Face](https://huggingface.co)
 - [Streamlit](https://streamlit.io)
-
-uvicorn main:app --reload
-
-http://127.0.0.1:8000
 
 ---
 

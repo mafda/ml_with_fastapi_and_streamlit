@@ -39,7 +39,9 @@ def main():
     # Set the title and caption for the Streamlit app
     st.set_page_config(page_title="Handwritten Digits Recognition")
     st.title("Handwritten Digits Recognition")
-    st.caption("Prototyping a ML Application")
+    st.caption(
+        "App integrated with a pretrained ViT model for image classification"
+    )
 
     # Initialize variables for the probability and the canvas image
     probs = None
